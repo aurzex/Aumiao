@@ -1,0 +1,33 @@
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".pyenv",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".svn",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "video",
+    "_build",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+line-length = 120
+indent-width = 4
+target-version = "py313"
+
+[lint]
+
+select = ["W","E", "UP", "F","I","N","PL","PERF"]
+ignore = ["F401","W191","PLR0913","N812","PLR2004"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[format]
+quote-style = "double"
+indent-style = "tab"
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
